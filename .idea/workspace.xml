@@ -3,10 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="28f9d8ac-1996-418b-8bb4-122f5f4ecab0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RepliesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RepliesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Reply.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Reply.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Thread.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Thread.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/threads/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/threads/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/ReadThreadsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ReadThreadsTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ThreadTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ThreadTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +156,7 @@
       <workItem from="1579627504478" duration="2190000" />
       <workItem from="1579725007894" duration="1558000" />
       <workItem from="1580044064254" duration="51000" />
-      <workItem from="1580449816847" duration="10905000" />
+      <workItem from="1580449816847" duration="19046000" />
     </task>
     <servers />
   </component>
@@ -165,10 +168,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="691" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1579701852518" />
-    <state x="723" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1580456809767">
+    <state x="665" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1580471028163">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="723" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800@0.0.1280.800" timestamp="1580456809767" />
+    <state x="665" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800@0.0.1280.800" timestamp="1580471028163" />
     <state width="623" height="212" key="GridCell.Tab.0.bottom" timestamp="1579707845840">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -189,9 +192,13 @@
       <screen x="0" y="23" width="1280" height="734" />
     </state>
     <state x="319" y="232" key="com.intellij.ide.util.TipDialog/0.23.1280.734@0.23.1280.734" timestamp="1580450125949" />
-    <state x="464" y="130" width="816" height="540" key="find.popup" timestamp="1579701872306">
+    <state x="464" y="130" width="816" height="540" key="find.popup" timestamp="1580476711918">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="464" y="130" width="816" height="540" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1579701872306" />
+    <state x="464" y="130" width="816" height="540" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1580476711918" />
+    <state x="627" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1580476779410">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="627" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1580476779410" />
   </component>
 </project>
