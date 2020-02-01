@@ -28,6 +28,9 @@
             </a>
 
             <a class="nav-link" href="/threads">All Threads</a>
+
+            <a class="nav-link" href="/threads/create">New Thread</a>
+
             <div class="dropdown">
                 <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                    aria-expanded="false">
