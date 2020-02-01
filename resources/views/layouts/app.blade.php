@@ -29,6 +29,19 @@
 
             <a class="nav-link" href="/threads">All Threads</a>
 
+            <div class="dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                   aria-expanded="false">Browse <span class="caret"></span></a>
+
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item"><a href="/threads">All Threads</a></li>
+
+                    @if (auth()->check())
+                        <li class="dropdown-item" ><a href="/threads?by={{ auth()->user()->name }}">My Threads</a></li>
+                    @endif
+                </ul>
+            </div>
+
             <a class="nav-link" href="/threads/create">New Thread</a>
 
             <div class="dropdown">
