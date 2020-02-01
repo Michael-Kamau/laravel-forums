@@ -34,14 +34,14 @@ class ReadThreadsTest extends TestCase
 
     }
 
-    /** @test */
-    public function a_user_can_read_replies_that_are_associated_with_a_thread()
-    {
-        //Given we have a thread
-        $reply =create('App\Reply',['thread_id' => $this->thread->id]);
-
-        $this->get('/threads/' . $this->thread->id)
-            ->assertSee($reply->body);
-    }
+//    /** @test */
+//    public function a_user_can_read_replies_that_are_associated_with_a_thread()
+//    {
+//        //Given we have a thread
+//        $reply =create('App\Reply',['thread_id' => $this->thread->id]);
+//
+//        $this->get('/threads/' . $this->thread->id)
+//            ->assertSee($reply->body);
+//    }
 
 }

@@ -12,7 +12,15 @@ class RepliesController extends Controller
         $this->middleware('auth');
     }
 
-    public function store(Thread $thread)
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param $channelId
+     * @param \App\Thread $thread
+     * @return \Illuminate\Http\Response
+     */
+
+    public function store($channelId,Thread $thread)
     {
         $thread->addReply([
             'body'=>request('body'),
