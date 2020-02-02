@@ -2,27 +2,29 @@
 
 @section('content')
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Forum threads</div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                @foreach ($threads as $thread)
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="level">
+                                <h4 class="flex">
+                                    <a href="{{ $thread->path() }}">
+                                        {{ $thread->title }}
+                                    </a>
+                                </h4>
 
-                    <div class="card-body">
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
+                                <a href="{{ $thread->path() }}">
+                                    {{ $thread->replies_count }} {{ str_plural('reply', $thread->replies_count) }}
+                                </a>
                             </div>
-                        @endif
+                        </div>
 
-                        @foreach($threads as $thread)
-                            <article>
-                                <a href="{{$thread->path()}}">{{$thread->title}}</a>
-                                <div class="body">{{$thread->body}}</div>
-                            </article>
-                            <hr>
-                        @endforeach
+                        <div class="panel-body">
+                            <div class="body">{{ $thread->body }}</div>
+                        </div>
                     </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
