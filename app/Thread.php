@@ -8,12 +8,21 @@ use Illuminate\Database\Eloquent\Model;
 
 class Thread extends Model
 {
+    use RecordsActivity;
+
     /**
      * Don't auto-apply mass assignment protection.
      *
      * @var array
      */
     protected $guarded = [];
+
+    /**
+     * The relationships to always eager-load.
+     *
+     * @var array
+     */
+    protected $with = ['creator', 'channel'];
 
     /**
      * Boot the model.
@@ -25,9 +34,11 @@ class Thread extends Model
         static::addGlobalScope('replyCount', function ($builder) {
             $builder->withCount('replies');
         });
+
+        static::deleting(function ($thread) {
+            $thread->replies->each->delete();
+        });
     }
-
-
 
     /**
      * Get a string path for the thread.
