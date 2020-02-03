@@ -4,18 +4,17 @@
             {{ config('app.name', 'Laravel') }}
         </a>
 
-        <a class="nav-link" href="/threads">All Threads</a>
-
         <div class="dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                aria-expanded="false">Browse <span class="caret"></span></a>
 
             <ul class="dropdown-menu">
                 <li class="dropdown-item"><a href="/threads">All Threads</a></li>
-
+                <li class="dropdown-item"><a href="/threads?popular=1">Popular Threads</a></li>
                 @if (auth()->check())
-                    <li class="dropdown-item" ><a href="/threads?by={{ auth()->user()->name }}">My Threads</a></li>
+                    <li class="dropdown-item"><a href="/threads?by={{ auth()->user()->name }}">My Threads</a></li>
                 @endif
+
             </ul>
         </div>
 
@@ -28,7 +27,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 @foreach ($channels as $channel)
-                    <li  class="dropdown-item" ><a a href="/threads/{{$channel->slug}}">{{$channel->name}}</a></li>
+                    <li class="dropdown-item"><a a href="/threads/{{$channel->slug}}">{{$channel->name}}</a></li>
                 @endforeach
             </ul>
         </div>
@@ -70,6 +69,9 @@
                                                      document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
+
+                            <a class="dropdown-item" href="{{ route('profile', Auth::user()) }}">My Profile</a>
+
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                   style="display: none;">
