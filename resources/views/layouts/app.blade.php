@@ -12,7 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/7cf9c715ad.js" crossorigin="anonymous"></script>
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
