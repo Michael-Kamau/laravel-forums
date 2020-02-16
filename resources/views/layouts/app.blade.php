@@ -15,8 +15,10 @@
     <script src="https://kit.fontawesome.com/7cf9c715ad.js" crossorigin="anonymous"></script>
     <!-- Scripts -->
     <script>
-        window.Laravel = {!! json_encode([
+        window.App = {!! json_encode([
             'csrfToken' => csrf_token(),
+            'user' => Auth::user(),
+            'signedIn' => Auth::check()
         ]) !!};
     </script>
 

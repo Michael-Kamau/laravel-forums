@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Thread;
 use App\Reply;
+use App\Thread;
 
 class RepliesController extends Controller
 {
@@ -26,10 +26,14 @@ class RepliesController extends Controller
     {
         $this->validate(request(), ['body' => 'required']);
 
-        $thread->addReply([
+        $reply = $thread->addReply([
             'body' => request('body'),
             'user_id' => auth()->id()
         ]);
+
+        if (request()->expectsJson()) {
+            return $reply->load('owner');
+        }
 
         return back()->with('flash', 'Your reply has been left.');
     }
